@@ -105,8 +105,11 @@ const finder = [20, 45, 60, 70];
 // const firstMatch = finder.find((number) => number > 50)
 // console.log(firstMatch)
 
-// 11. **`reduce` for Aggregation**  
+// 11. **`reduce` for Aggregation** 
+//     **STRUGGLE POINT** 
 //     Use `reduce` to multiply all numbers in `[2, 3, 4]` (result: `24`).  
+const result  = [2, 3, 4].reduce((a,b) => a*b)
+// console.log(result)
 
 // ### **Section 4: String Manipulation**  
 // **Difficulty: Mixed**  
@@ -151,18 +154,22 @@ let transform = "example".toUpperCase();
 const addTwo = num => num + 2;
 
 let myNums = [3, 6, 9];
+
+// let mapped = myNums.map(addTwo)
+// console.log(mapped)
  
 
 // 17. **Custom Filter Function**  
 //     Write a function `isLongWord(word)` that returns `true` if `word.length > 5`.  
 //     Use it to filter myFruits 
-const myFruit = ["apple", "banana", "kiwi"];  
+const myFruit = ["apple", "banana", "kiwi"];
 
 // 18. **Chaining Methods**  
 //    Chain `map` (multiply by 3) and `filter` (keep even numbers).  
 
 let myNums2 = [1, 2, 3, 4];
-
+// myNums2 = myNums2.map((num)=> num*3).filter((num)=>num%2 === 0)
+// console.log(myNums2)
 
 
 // ### **Section 6: Mixed Challenges**  
@@ -172,27 +179,53 @@ let myNums2 = [1, 2, 3, 4];
    
 const data = [{id: 1, items: ["baseball", "soccer ball"]},   {id: 2, items: ["Game Boy"]}];
 
-//     Log all `items` for each object.  
-
+//     Log all `items` for each object.
+// for (let object of data){
+//     console.log(object.items)
+// }  
 
 // 20. **Count String Occurrences**  
 //     Loop through mixedLetters  and count how many times "a" appears.  
 const mixedLetters = ["a", "b", "a", "c"];
+// let a_counter = 0;
+// for (letter of mixedLetters){
+//     if (letter === "a"){
+//         a_counter += 1
+//     }
+// }
+// console.log(a_counter)
 
 // 21. **Flatten an Array**  
+//     **STRUGGLE POINT**
 //     Use `reduce` or loops to flatten the array flat into `[1, 2, 3, 4]; 
+// const flat = [[1, 2], [3, 4]].reduce(
+//     function(a,b){
+//         return a.concat(b)
+//     }
+// )
+// console.log(flat)
 
-const flat = [[1, 2], [3, 4]];
-
-// 22. **Sort and Reverse**  
+// 22. **Sort and Reverse** 
+//     **STRUGGLE POINT**
 //     Sort `ages` in ascending order, then reverse it.  
-const ages = [10, 2, 5, 8];
+// .sort() treats array elements as strings and sorts them in alphabetical order.
+let ages = [10, 2, 5, 8];
+// ages = ages.sort((a, b) => a - b);
+// console.log(ages)
 
 // 23. **Extract Object Keys**  
 //     Given `member1`, loop through its keys and log them.  
 const member1 = {name: "Tom", age: 28};
+// for (let key in member1){
+//     console.log(key)
+// }
 
 // 24. **Merge Arrays**  
 //     Merge `firstArray` and `secondArray` into one array using a loop or method.  
 let firstArray = [1, 2];
 let secondArray = [3, 4];
+// let mergedArray = [...firstArray, ...secondArray]
+// console.log(mergedArray)
+
+
+//Areas for review: reduce(), map(), sort(), reverse(), Arrow Functions
